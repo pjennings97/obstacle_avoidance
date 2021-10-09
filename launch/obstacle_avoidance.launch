@@ -1,0 +1,10 @@
+<launch>
+  <!-- Turtlebot3 -->
+  <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch"/>
+  <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch"/>
+
+  <!-- goal publisher -->
+  <node pkg="obstacle_avoidance" type="goal_publisher" name="goal_publisher">
+    <param name="padding" value="5"/>
+  </node>
+</launch>
